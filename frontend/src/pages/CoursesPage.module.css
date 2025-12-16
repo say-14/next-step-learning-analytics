@@ -1,0 +1,509 @@
+.container {
+  min-height: 100vh;
+  background: #f0f2f5;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cardTitle {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.courseList {
+  list-style: none;
+}
+
+.courseItem {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.courseItem:hover {
+  background: #e9ecef;
+}
+
+.courseItem.active {
+  background: #e7f1ff;
+  border-left-color: #667eea;
+}
+
+.courseTitle {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.courseMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badgeBeginner {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badgeIntermediate {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.badgeAdvanced {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.summaryItem {
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.summaryValue {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.summaryLabel {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.miniDoughnut {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto 0;
+  position: relative;
+}
+
+.miniDoughnutLabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.funnelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.funnelStep {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.funnelLabel {
+  width: 80px;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.funnelBarWrapper {
+  flex: 1;
+  position: relative;
+  height: 32px;
+  background: #f0f2f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.funnelBar {
+  height: 100%;
+  width: var(--bar-width);
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+.funnelBarText {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.comparisonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.comparisonRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.comparisonLabel {
+  width: 60px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.comparisonBarContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.comparisonBarNegative,
+.comparisonBarPositive {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.comparisonBarNegative {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comparisonBarCenter {
+  width: 70px;
+  height: 100%;
+  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.comparisonBarFillPositive {
+  height: 100%;
+  width: var(--bar-width);
+  background: linear-gradient(90deg, #28a745, #20c997);
+  border-radius: 0 8px 8px 0;
+  transition: width 0.5s ease;
+}
+
+.comparisonBarFillNegative {
+  height: 100%;
+  width: var(--bar-width);
+  background: linear-gradient(270deg, #dc3545, #e74c3c);
+  border-radius: 8px 0 0 8px;
+  transition: width 0.5s ease;
+}
+
+.comparisonValue {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.comparisonDiff {
+  width: 70px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.diffPositive {
+  background: #d4edda;
+  color: #155724;
+}
+
+.diffNegative {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.comparisonLegend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.comparisonLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.legendDotPositive {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #28a745;
+}
+
+.legendDotNegative {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #dc3545;
+}
+
+.dropoutInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dropoutVisual {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.dropoutMainStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropoutStatCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(238, 90, 90, 0.3);
+}
+
+.dropoutStatNumber {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.dropoutStatUnit {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dropoutStatLabel {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.dropoutProgressSection {
+  flex: 1;
+}
+
+.dropoutProgressLabel {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.dropoutProgressBar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dropoutProgressTrack {
+  height: 24px;
+  background: linear-gradient(90deg, #e8f5e9 0%, #ffebee 100%);
+  border-radius: 12px;
+  position: relative;
+  overflow: visible;
+}
+
+.dropoutProgressFill {
+  height: 100%;
+  width: var(--progress);
+  background: linear-gradient(90deg, #66bb6a, #ffca28, #ff7043);
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.dropoutProgressMarker {
+  position: absolute;
+  left: var(--position);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: 3px solid #ff5252;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropoutProgressValue {
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #ff5252;
+}
+
+.dropoutProgressScale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #999;
+  padding: 0 5px;
+}
+
+.dropoutPeakSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+  border-radius: 12px;
+  border-left: 4px solid #ff5252;
+}
+
+.dropoutPeakBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropoutPeakIcon {
+  font-size: 1.2rem;
+}
+
+.dropoutPeakText {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.dropoutPeakValue {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.dropoutPeakRate {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #666;
+  margin-left: 8px;
+}
+
+.engagementStats {
+  display: flex;
+  gap: 20px;
+}
+
+.engagementItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.engagementIcon {
+  font-size: 1.5rem;
+}
+
+.engagementContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.engagementValue {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.engagementLabel {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

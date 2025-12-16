@@ -1,0 +1,434 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #333;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a1a2e;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.sidebarTitle {
+  color: #1a1a2e;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.courseList {
+  list-style: none;
+}
+
+.courseItem {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.courseItem:hover {
+  background: #e7f1ff;
+  border-color: #667eea;
+}
+
+.courseItem.active {
+  background: #e7f1ff;
+  border-color: #667eea;
+}
+
+.courseTitle {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.courseStats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.statGood {
+  color: #28a745;
+}
+
+.statBad {
+  color: #dc3545;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cardTitle {
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.summaryItem {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.summaryValue {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.summaryLabel {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.miniProgressBarBad,
+.miniProgressBarGood {
+  width: 80%;
+  height: 8px;
+  margin: 10px auto 0;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.miniProgressFillBad {
+  height: 100%;
+  width: var(--progress);
+  background: linear-gradient(90deg, #dc3545, #ff6b6b);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.miniProgressFillGood {
+  height: 100%;
+  width: var(--progress);
+  background: linear-gradient(90deg, #28a745, #20c997);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.miniProgressBar {
+  width: 80%;
+  height: 8px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #28a745 0%, #ffc107 50%, #dc3545 100%);
+  border-radius: 4px;
+  position: relative;
+  opacity: 0.7;
+}
+
+.miniProgressFill {
+  height: 100%;
+  width: var(--progress);
+  background: transparent;
+  border-radius: 4px;
+}
+
+.miniProgressMarker {
+  position: absolute;
+  left: var(--position);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: white;
+  border: 2px solid #dc3545;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chartContainer {
+  position: relative;
+  height: 350px;
+}
+
+/* 영역 차트 스타일 */
+.areaChartContainer {
+  padding: 10px 0;
+}
+
+.chartWrapper {
+  position: relative;
+  height: 300px;
+  padding: 10px;
+}
+
+/* 범례 */
+.chartLegend {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.legendLow {
+  background-color: #28a745;
+}
+
+.legendMedium {
+  background-color: #ffc107;
+}
+
+.legendHigh {
+  background-color: #fd7e14;
+}
+
+.legendCritical {
+  background-color: #dc3545;
+}
+
+/* 피크 구간 표시 */
+.peakInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #fff5f5;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+}
+
+.peakLabel {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.peakValue {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* 위험 구간 가로 막대 차트 */
+.dangerBarChart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dangerBarItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.dangerBarItem:hover {
+  transform: translateX(5px);
+}
+
+.dangerBarLabel {
+  width: 80px;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.dangerBarTrack {
+  flex: 1;
+  height: 24px;
+  background: #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dangerBarFill {
+  height: 100%;
+  width: var(--bar-width);
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.dangerBarValue {
+  width: 50px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* 위험 구간 레벨별 색상 */
+.dangerBarItem.critical .dangerBarFill {
+  background-color: #dc3545;
+}
+
+.dangerBarItem.critical .dangerBarValue {
+  color: #dc3545;
+}
+
+.dangerBarItem.high .dangerBarFill {
+  background-color: #fd7e14;
+}
+
+.dangerBarItem.high .dangerBarValue {
+  color: #fd7e14;
+}
+
+.dangerBarItem.medium .dangerBarFill {
+  background-color: #ffc107;
+}
+
+.dangerBarItem.medium .dangerBarValue {
+  color: #ffc107;
+}
+
+.noData {
+  color: #28a745;
+}
+
+/* 도넛 차트 스타일 */
+.doughnutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  overflow: visible;
+}
+/* 도넛 차트 영역 wrapper(추가) */
+.doughnutChartWrap {
+  padding: 16px;      /* 툴팁/hover 여유 */
+  overflow: visible;
+}
+
+.doughnutChart {
+  width: 300px;
+  height: 300px;
+  padding: 0;
+  overflow: visible;
+  box-sizing: border-box;  /* 안전장치 */
+}
+
+.doughnutLegend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.doughnutLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #f8f9fa;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doughnutLegendItem:hover {
+  background: #e9ecef;
+  transform: scale(1.05);
+}
+
+.doughnutLegendColor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.doughnutLegendText {
+  font-size: 0.85rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* 도넛 차트 색상 */
+.doughnutColor1 { background-color: #E8F1FA; }
+.doughnutColor2 { background-color: #C6DBEF; }
+.doughnutColor3 { background-color: #9ECAE1; }
+.doughnutColor4 { background-color: #6BAED6; }
+.doughnutColor5 { background-color: #3182BD; }
+.doughnutColor6 { background-color: #08519C; }
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doughnutChart {
+    width: 220px;
+    height: 220px;
+  }
+
+  .doughnutLegend {
+    max-width: 100%;
+  }
+}

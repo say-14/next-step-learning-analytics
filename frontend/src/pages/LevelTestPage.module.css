@@ -1,0 +1,178 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 20px;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+}
+
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.select:focus,
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.checkboxGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.checkboxItem:hover {
+  background: #e8e8e8;
+}
+
+.checkboxItem input {
+  width: 18px;
+  height: 18px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+  border-radius: 15px;
+}
+
+.levelBadge {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.confidence {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.levelDesc {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-weight: 600;
+  color: #444;
+  margin: 20px 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #667eea;
+}
+
+.pathList,
+.strengthList {
+  list-style: none;
+  padding: 0;
+}
+
+.pathList li,
+.strengthList li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.pathList li::before {
+  content: '📚';
+  position: absolute;
+  left: 0;
+}
+
+.strengthList.positive li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+}
+
+.strengthList.negative li::before {
+  content: '📝';
+  position: absolute;
+  left: 0;
+}
+
+.timeEstimate {
+  background: #667eea;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .checkboxGroup {
+    grid-template-columns: 1fr;
+  }
+}

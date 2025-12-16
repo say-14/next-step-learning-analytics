@@ -1,0 +1,93 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+}
+
+.menuCard {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.menuCard:hover {
+  transform: translateY(-10px);
+  background: white;
+  border-color: #667eea;
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+}
+
+.menuIcon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.menuTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.menuDesc {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.apiLink {
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.apiLink a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.apiLink a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

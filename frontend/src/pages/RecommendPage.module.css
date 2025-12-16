@@ -1,0 +1,234 @@
+.container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+}
+
+.card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 12px 25px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup:last-child {
+  justify-content: flex-end;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.submitBtn {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.recommendations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.recCard {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  border-left: 5px solid #11998e;
+  transition: transform 0.3s;
+}
+
+.recCard:hover {
+  transform: translateY(-5px);
+}
+
+.recTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.recMeta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.recBadge {
+  padding: 4px 10px;
+  background: #e9ecef;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.recScore {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.recReasons {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.recReason {
+  font-size: 0.85rem;
+  color: #11998e;
+  padding: 3px 0;
+}
+
+.learningPath {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pathStage {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  border-left: 5px solid;
+}
+
+.pathStage:nth-child(1) {
+  border-left-color: #28a745;
+}
+
+.pathStage:nth-child(2) {
+  border-left-color: #ffc107;
+}
+
+.pathStage:nth-child(3) {
+  border-left-color: #dc3545;
+}
+
+.stageHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.stageNumber {
+  width: 35px;
+  height: 35px;
+  background: #11998e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.stageDifficulty {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+.stageCourses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stageCourse {
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stageCourseTitle {
+  font-weight: 600;
+}
+
+.stageCourseRate {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendations {
+    grid-template-columns: 1fr;
+  }
+}
